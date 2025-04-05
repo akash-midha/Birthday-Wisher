@@ -2,8 +2,17 @@
 
 /* VARIABLES */
 :root {
-  --main-bg-color-dark: #212529;
-  --main-text-color-dark: #e8e8e8;
+  --main-bg-color-light: #ffffff; /* White background */
+  --main-text-color-dark: #003366; /* Dark blue text */
+  --highlight-color: #007BFF; /* Blue accents */
+  --countdown-box-bg: #007BFF; /* Blue background for countdown boxes */
+  --countdown-text-color: #ffffff; /* White text for countdown */
+  --input-bg-color: #f1f1f1; /* Light gray input background */
+  --input-border-color: #007BFF; /* Blue borders */
+  --btn-bg-color: #007BFF; /* Button blue */
+  --btn-text-color: #ffffff; /* White text for button */
+  --link-color: #007BFF; /* Link blue */
+  --hover-opacity: 0.8;
 }
 
 * {
@@ -11,12 +20,13 @@
   margin: 0;
   padding: 0;
 }
+
 body {
   font-family: 'Montserrat', sans-serif;
-  background-color: var(--main-bg-color-dark);
-  color: var(--main-text-color-dark);
-  background-color: #1d1d1d;
+  background-color: var(--main-bg-color-light); /* White background */
+  color: var(--main-text-color-dark); /* Dark blue text */
 }
+
 .page {
   width: 100%;
   height: 100vh;
@@ -26,12 +36,16 @@ body {
   align-items: center;
   text-align: center;
 }
+
 .heading {
   font-size: 45px;
+  color: var(--main-text-color-dark);
 }
+
 .highlight {
-  color: #7f78d2;
+  color: var(--highlight-color);
 }
+
 .countdown-wrapper {
   max-width: 800px;
   display: flex;
@@ -40,11 +54,12 @@ body {
   justify-content: space-around;
   margin: 40px 0;
 }
+
 .countdown-box {
-  background-color: #413c69;
+  background-color: var(--countdown-box-bg); /* Blue background for countdown */
   font-size: 50px;
   font-weight: 700;
-  color: #dcd6f7;
+  color: var(--countdown-text-color); /* White text for countdown */
   border-radius: 15px;
   width: 160px;
   height: 160px;
@@ -55,29 +70,37 @@ body {
   align-items: center;
   text-align: center;
 }
+
 .legend {
   font-size: 30px;
   color: #a6b1e1;
 }
+
 .wish-message {
   font-size: 45px;
   font-weight: 700;
+  color: var(--main-text-color-dark);
 }
+
 .birthdate {
   font-size: 25px;
   font-weight: 600;
-  color: #7f78d2;
+  color: var(--highlight-color); /* Blue text for birthdate */
 }
+
 .credits {
   margin-top: 15px;
 }
+
 .github-logo {
-  opacity: 0.5;
+  opacity: var(--hover-opacity);
   width: 50px;
 }
+
 .github-logo:hover {
   opacity: 1;
 }
+
 .form {
   display: flex;
   flex-direction: column;
@@ -86,28 +109,31 @@ body {
   text-align: center;
   margin-top: 20px;
 }
+
 .form input {
   margin: 10px;
 }
+
 input {
   color: var(--main-text-color-dark);
   outline: none;
   width: 300px;
   height: 40px;
-  background-color: transparent;
-  border: 1px rgba(255, 255, 255, 0.2) solid;
+  background-color: var(--input-bg-color); /* Light gray input background */
+  border: 1px solid var(--input-border-color); /* Blue border for inputs */
   border-radius: 5px;
   padding-left: 10px;
   padding-right: 10px;
   font-size: 18px;
 }
+
 select {
   width: 300px;
   height: 40px;
   background-color: transparent;
-  color: rgba(255, 255, 255, 0.527);
+  color: rgba(0, 0, 0, 0.8); /* Darker text for readability */
   font-family: Montserrat, sans-serif;
-  border: 1px rgba(255, 255, 255, 0.164) solid;
+  border: 1px solid var(--input-border-color); /* Blue border for select */
   padding-left: 20px;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -116,32 +142,38 @@ select {
   margin-top: 10px;
   outline: none;
 }
+
 input:focus,
 select:focus,
 .btn:focus {
-  border: 1px rgba(255, 255, 255, 1) solid;
+  border: 1px solid var(--input-border-color); /* Blue focus border */
   transition: all 0.5s;
 }
+
 .btn {
   width: 300px;
   height: 40px;
   margin-top: 20px;
   outline: none;
-  border: 1px rgba(255, 255, 255, 0.2) solid;
-  background-color: transparent;
+  border: 1px solid var(--input-border-color); /* Blue border for button */
+  background-color: var(--btn-bg-color); /* Blue button */
   border-radius: 5px;
-  color: rgba(255, 255, 255, 0.719);
+  color: var(--btn-text-color); /* White text on button */
   font-size: 18px;
   font-weight: 700;
 }
+
 .btn:hover {
-  color: white;
+  color: var(--btn-text-color); /* White text on hover */
+  background-color: #0056b3; /* Darker blue on hover */
 }
+
 a {
-  color: #7f78d2;
+  color: var(--link-color); /* Blue link color */
   font-weight: bold;
   margin-top: 20px;
 }
+
 .gen-link {
   margin-top: 20px;
   font-size: 400;
